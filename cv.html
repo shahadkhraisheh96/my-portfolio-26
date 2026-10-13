@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahad Khraisheh — Curriculum Vitae</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #c2597f;
+            --primary-dark: #9e3d61;
+            --text-dark: #1e293b;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+            --bg-light: #fdf2f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+
+        .cv-actions {
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+        }
+
+        .btn-back {
+            background: #ffffff;
+            color: var(--text-dark);
+            border: 1px solid var(--border);
+        }
+
+        .btn-back:hover {
+            background: #f1f5f9;
+        }
+
+        .btn-print {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .btn-print:hover {
+            background: var(--primary-dark);
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 45px 55px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border);
+        }
+
+        header.cv-header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+
+        h1.name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+
+        .title-tag {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 6px 0 14px 0;
+            letter-spacing: 0.2px;
+        }
+
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 25px;
+            font-size: 13.5px;
+            color: var(--text-muted);
+        }
+
+        .contact-row a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .contact-row a:hover {
+            color: var(--primary);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-item i {
+            color: var(--primary);
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #0f172a;
+            border-bottom: 1.5px solid #0f172a;
+            padding-bottom: 4px;
+            margin: 25px 0 15px 0;
+        }
+
+        .summary-text {
+            font-size: 14px;
+            color: var(--text-muted);
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+
+        .timeline-role {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .timeline-date {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .timeline-org {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        ul.bullet-list {
+            padding-left: 20px;
+            font-size: 13.5px;
+            color: var(--text-muted);
+        }
+
+        ul.bullet-list li {
+            margin-bottom: 5px;
+        }
+
+        .skills-table {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            font-size: 13.5px;
+        }
+
+        .skill-group h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+
+        .skill-group p {
+            color: var(--text-muted);
+        }
+
+        .cert-item {
+            margin-bottom: 10px;
+            font-size: 13.5px;
+        }
+
+        .cert-item strong {
+            color: #0f172a;
+        }
+
+        .cert-item span {
+            color: var(--text-muted);
+        }
+
+        .project-item {
+            margin-bottom: 18px;
+        }
+
+        .project-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .project-badge {
+            font-size: 13px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .project-link {
+            font-size: 13px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 4px;
+            display: inline-block;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .cv-actions {
+                display: none;
+            }
+            .cv-container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            .section-title {
+                break-after: avoid;
+            }
+            .timeline-item, .project-item {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-actions">
+        <a href="index.html" class="action-btn btn-back"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+        <div style="display: flex; gap: 10px;">
+            <a href="media/Shahad_Khraisheh_CV.pdf" target="_blank" download class="action-btn btn-back"><i class="fa-solid fa-file-arrow-down"></i> Download Original PDF</a>
+            <button onclick="window.print()" class="action-btn btn-print"><i class="fa-solid fa-print"></i> Print / Save as PDF</button>
+        </div>
+    </div>
+
+    <div class="cv-container">
+        <header class="cv-header">
+            <h1 class="name">Shahad Khraisheh</h1>
+            <div class="title-tag">BackEnd Developer | Angular | Asp.Net Core | Java | SQL Server | REST APIs</div>
+            <div class="contact-row">
+                <div class="contact-item"><i class="fa-solid fa-envelope"></i> <a href="mailto:shahadkh2004@gmail.com">shahadkh2004@gmail.com</a></div>
+                <div class="contact-item"><i class="fa-solid fa-phone"></i> <a href="tel:+962791547562">+962 79 154 7562</a></div>
+                <div class="contact-item"><i class="fa-solid fa-location-dot"></i> Amman, Jordan</div>
+                <div class="contact-item"><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/shahadkhraisheh" target="_blank">linkedin.com/in/shahadkhraisheh</a></div>
+                <div class="contact-item"><i class="fa-brands fa-github"></i> <a href="https://github.com/shahadkhraisheh96" target="_blank">github.com/shahadkhraisheh96</a></div>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section>
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary-text">
+                Results-driven Junior Full-Stack Developer with hands-on experience designing and developing scalable web applications and enterprise solutions using ASP.NET Core MVC, PHP, C#, SQL Server, Entity Framework, HTML, CSS, JavaScript, and Bootstrap. Strengthened backend development skills through a Java Developer Internship at ProgressSoft, gaining practical experience in enterprise software development, secure coding practices, and collaborative Agile environments.
+            </p>
+            <p class="summary-text">
+                Recognized for combining strong technical expertise with excellent problem-solving, analytical thinking, communication, teamwork, adaptability, and time management to deliver reliable, maintainable, and user-focused solutions. Passionate about continuous learning, writing clean and efficient code, and leveraging AI-powered technologies to build innovative, real-world applications that create measurable business value.
+            </p>
+        </section>
+
+        <!-- Experience -->
+        <section>
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div class="timeline-role">Fullstack Development Trainee</div>
+                    <div class="timeline-date">02/2026 – 06/2026</div>
+                </div>
+                <div class="timeline-org">Orange Coding School</div>
+                <ul class="bullet-list">
+                    <li>Successfully completed an intensive 4-month Full-Stack Web Development Bootcamp focused on designing and building production-ready web applications using ASP.NET Core MVC, C#, HTML5, CSS3, JavaScript, Bootstrap, SQL Server, and Entity Framework.</li>
+                    <li>Developed multiple end-to-end web applications by applying Object-Oriented Programming (OOP), SOLID principles, Clean Architecture, RESTful APIs, and database design following industry best practices.</li>
+                    <li>Worked in an Agile development environment, participating in sprint planning, code reviews, debugging, testing, version control with Git/GitHub, and collaborative software development workflows.</li>
+                    <li>Strengthened front-end development skills by creating responsive, user-friendly interfaces and integrating dynamic backend functionality with relational databases.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div class="timeline-role">Java Developer Intern</div>
+                    <div class="timeline-date">09/2025 – 12/2025</div>
+                </div>
+                <div class="timeline-org">ProgressSoft</div>
+                <ul class="bullet-list">
+                    <li>Developed and maintained Java-based enterprise application modules during a structured 4-month internship at ProgressSoft, a leading fintech company in Jordan.</li>
+                    <li>Collaborated with senior developers on backend logic, API integration, and unit testing within an Agile team environment.</li>
+                    <li>Completed ProgressSoft's internal Java Developer training program, covering enterprise Java patterns and software best practices.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2 class="section-title">Education</h2>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div class="timeline-role">Bachelor of Science in Computer Science (86%)</div>
+                    <div class="timeline-date">10/2022 – 02/2026</div>
+                </div>
+                <div class="timeline-org">Zarqa University</div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section>
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-title">CarFit — Smart Car Recommendation Application</div>
+                <div class="project-badge">Orange Final Project | ASP.NET Core, C#, SQL Server, REST APIs</div>
+                <ul class="bullet-list">
+                    <li>Built specifically for the Jordanian market to match buyers based on lifestyle questionnaires.</li>
+                    <li>Evaluates and scores the Jordanian car inspection report (ورقة الفحص) for used cars, presenting findings in plain Arabic and English.</li>
+                    <li>Live Demo: <a href="https://carfit-shahad-fea5abd3faayg8fa.westus3-01.azurewebsites.net/" target="_blank" class="project-link">carfit-shahad.azurewebsites.net</a> &nbsp;|&nbsp; GitHub: <a href="https://github.com/shahadkhraisheh96/CarFit" target="_blank" class="project-link">github.com/shahadkhraisheh96/CarFit</a></li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">VOLTEX — E-Commerce Web Application</div>
+                <div class="project-badge">ASP.NET Core MVC, Entity Framework, SQL Server | Role: Scrum Master</div>
+                <ul class="bullet-list">
+                    <li>Robust architecture with complete user and admin roles, secure authentication, dynamic product and category management, a persistent cart, and advanced order processing.</li>
+                    <li>GitHub: <a href="https://github.com/yousefzuainat/E-commerce_FullStuckProject" target="_blank" class="project-link">github.com/yousefzuainat/E-commerce_FullStuckProject</a></li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Gold Tracker — Real-Time Financial Dashboard</div>
+                <div class="project-badge">JavaScript, Chart.js, Financial APIs, Dark Mode</div>
+                <ul class="bullet-list">
+                    <li>Real-time gold prices through interactive charts (1-month history via API), personal asset portfolio management, live financial news feed, and authentication.</li>
+                    <li>Live Demo: <a href="https://shahadkhraisheh96.github.io/goldTrakerProject/" target="_blank" class="project-link">shahadkhraisheh96.github.io/goldTrakerProject</a> &nbsp;|&nbsp; GitHub: <a href="https://github.com/shahadkhraisheh96/goldTrakerProject" target="_blank" class="project-link">github.com/shahadkhraisheh96/goldTrakerProject</a></li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Fake News Detection System</div>
+                <div class="project-badge">Graduation Project | Python, NLP, Machine Learning</div>
+                <ul class="bullet-list">
+                    <li>Linguistic pattern extraction pipeline to analyze news articles and flag misinformation against 1,000+ news dataset.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">HoneyByte E-Commerce Platform</div>
+                <div class="project-badge">3 Production Iterations (HTML/CSS/JS &rarr; PHP/SQL &rarr; ASP.NET MVC with C#)</div>
+                <ul class="bullet-list">
+                    <li>Re-architected across multiple stacks from basic frontend to full MVC pattern with database-driven product management and authentication.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-table">
+                <div class="skill-group">
+                    <h4>Backend:</h4>
+                    <p>Java (OOP), ASP.NET MVC, C#, PHP, Python, JavaScript, RESTful APIs, Entity Framework</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Frontend:</h4>
+                    <p>HTML5, CSS3, JavaScript, Angular, Bootstrap, Android (XML + Java)</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Databases:</h4>
+                    <p>SQL Server, Oracle SQL, MySQL, PHP-SQL, Relational Modeling</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Tools & Cloud:</h4>
+                    <p>Git, GitHub, Linux, Visual Studio, Azure, AWS, MATLAB</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section>
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-item"><strong><a href="https://drive.google.com/drive/folders/1nKyIVzBUbimYJMG6J1DeGCbDVBtL8edH?usp=drive_link" target="_blank" class="project-link">Full-Stack ASP.NET</a></strong> — Pioneers Academy</div>
+            <div class="cert-item"><strong><a href="https://www.linkedin.com/posts/shahadkhraisheh_internship-progresssoft-softwaredevelopment-activity-7408953130043809792-CtFK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE2CmZwBPTxw1ESe7PVSKY-77216U0ndvu8" target="_blank" class="project-link">Java Developer Training</a></strong> — ProgressSoft</div>
+            <div class="cert-item"><strong><a href="https://www.linkedin.com/posts/shahadkhraisheh_uiux-designthinking-learningandgrowing-activity-7304096485741154304-wje-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE2CmZwBPTxw1ESe7PVSKY-77216U0ndvu8" target="_blank" class="project-link">UI/UX Design</a></strong> — Google Developer Group</div>
+            <div class="cert-item"><strong><a href="https://www.linkedin.com/posts/shahadkhraisheh_im-so-happy-to-share-this-achievement-that-activity-7215015288113655809-Hjpr?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE2CmZwBPTxw1ESe7PVSKY-77216U0ndvu8" target="_blank" class="project-link">CTF & Cyber Warriors Training</a></strong> — National Cyber Security Center (NCSCJO)</div>
+            <div class="cert-item"><strong><a href="https://www.linkedin.com/posts/shahadkhraisheh_thrilled-to-share-that-ive-successfully-activity-7273694511644499968--2un?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE2CmZwBPTxw1ESe7PVSKY-77216U0ndvu8" target="_blank" class="project-link">Leaders Training Program</a></strong> — IEEE SAC Jordan</div>
+        </section>
+
+        <!-- Volunteer -->
+        <section>
+            <h2 class="section-title">Volunteer & Leadership</h2>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div class="timeline-role">Vice Chair</div>
+                    <div class="timeline-date">03/2025 – 10/2025</div>
+                </div>
+                <div class="timeline-org">IEEE Zarqa University Student Branch</div>
+                <ul class="bullet-list">
+                    <li>Led branch operations and strategic planning for a 100+ member IEEE student community.</li>
+                    <li>Coordinated technical events and workshops, increasing participation by ~30% quarter-over-quarter.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div class="timeline-role">Social Media Manager</div>
+                    <div class="timeline-date">04/2024 – 03/2025</div>
+                </div>
+                <div class="timeline-org">IEEE Zarqa University Student Branch</div>
+                <ul class="bullet-list">
+                    <li>Managed official social channels, growing audience reach and producing media for 10+ technical activities.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Languages -->
+        <section>
+            <h2 class="section-title">Languages</h2>
+            <p style="font-size: 13.5px; color: var(--text-muted);"><strong>Arabic:</strong> Native &nbsp;|&nbsp; <strong>English:</strong> Advanced</p>
+        </section>
+    </div>
+</body>
+</html>
